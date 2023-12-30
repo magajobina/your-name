@@ -1,0 +1,102 @@
+:root {
+  --color: firebrick;
+  --border-color: firebrick;
+  --shadow-color: rgb(112, 20, 20);
+}
+.clickr {
+  display: none;
+  // display: flex;
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 32px;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 340px;
+  background-color: #222;
+  box-shadow: 0 -3px var(--color),
+              3px 0 var(--color),
+              0 3px var(--color),
+              -3px 0 var(--color),
+              0 -6px var(--border-color),
+              3px -3px var(--border-color),
+              6px 0 var(--border-color),
+              0 6px var(--border-color),
+              -3px 3px var(--border-color),
+              -6px 0 var(--border-color),
+              -3px -3px var(--border-color),
+              3px 3px var(--border-color),
+              0px 9px var(--shadow-color),
+              3px 6px var(--shadow-color),
+              6px 3px var(--shadow-color),
+              0px 9px var(--shadow-color),
+              -3px 6px var(--shadow-color),
+              -6px 3px var(--shadow-color);
+}
+
+#clicker_button {
+  position: relative;
+  font-size: 24px;
+  width: 200px;
+  height: 75px;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 64px;
+  border: none;
+  background-size: cover;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  font-weight: bold;
+  background-color: var(--color);
+  box-shadow: 0 -3px var(--color),
+              3px 0 var(--color),
+              0 3px var(--color),
+              -3px 0 var(--color),
+              0 -6px var(--border-color),
+              3px -3px var(--border-color),
+              6px 0 var(--border-color),
+              0 6px var(--border-color),
+              -3px 3px var(--border-color),
+              -6px 0 var(--border-color),
+              -3px -3px var(--border-color),
+              3px 3px var(--border-color),
+              0px 9px var(--shadow-color),
+              3px 6px var(--shadow-color),
+              6px 3px var(--shadow-color),
+              0px 9px var(--shadow-color),
+              -3px 6px var(--shadow-color),
+              -6px 3px var(--shadow-color);
+}
+
+#clicker_button:active {
+  top: 6px;
+box-shadow: 0 -3px var(--color),
+              3px 0 var(--color),
+              0 3px var(--color),
+              -3px 0 var(--color),
+              0 -6px var(--border-color),
+              3px -3px var(--border-color),
+              6px 0 var(--border-color),
+              0 6px var(--border-color),
+              -3px 3px var(--border-color),
+              -6px 0 var(--border-color),
+              -3px -3px var(--border-color),
+              3px 3px var(--border-color),
+              0px 6px var(--shadow-color),
+              3px 3px var(--shadow-color),
+              6px 0px var(--shadow-color),
+              0px 6px var(--shadow-color),
+              -3px 3px var(--shadow-color),
+              -6px 0px var(--shadow-color);
+}
+
+#display,
+#clickr_counter {
+  height: 32px;
+}

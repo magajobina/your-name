@@ -1,0 +1,274 @@
+section.history {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  width: 300px;
+  height: 300px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+	transition: transform .4s;
+	z-index: 10;
+  box-shadow:
+		
+	/* Inner Background Color */
+		0 calc(var(--pixel) * -3) 0 calc(var(--pixel) * -1) var(--pixel-bg),
+		0 calc(var(--pixel) * 3) 0 calc(var(--pixel) * -1) var(--pixel-bg),
+		0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -2) var(--pixel-bg),
+		0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -2) var(--pixel-bg),
+		0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -4) var(--pixel-bg),
+		0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -4) var(--pixel-bg),
+		0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -6) var(--pixel-bg),
+		0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -6) var(--pixel-bg),
+		
+	/* Pixel Border Layer 1 */
+		calc(var(--pixel) * -1) 0 0 0 var(--pixel-border),
+		var(--pixel) 0 0 0 var(--pixel-border),
+		0 calc(var(--pixel) * -2) 0 0 var(--pixel-border),
+		0 calc(var(--pixel) * 2) 0 0 var(--pixel-border),
+		0 calc(var(--pixel) * -5) 0 calc(var(--pixel) * -1) var(--pixel-border),
+		0 calc(var(--pixel) * 5) 0 calc(var(--pixel) * -1) var(--pixel-border),
+		0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -2) var(--pixel-border),
+		0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -2) var(--pixel-border),
+		0 calc(var(--pixel) * -10) 0 calc(var(--pixel) * -4) var(--pixel-border),
+		0 calc(var(--pixel) * 10) 0 calc(var(--pixel) * -4) var(--pixel-border),
+		0 calc(var(--pixel) * -13) 0 calc(var(--pixel) * -6) var(--pixel-border),
+		0 calc(var(--pixel) * 13) 0 calc(var(--pixel) * -6) var(--pixel-border),
+		
+	/* Pixel Border Layer 2 */
+		calc(var(--pixel) * -2) 0 0 0 var(--pixel-border-2),
+		calc(var(--pixel) * 2) 0 0 0 var(--pixel-border-2),
+		0 calc(var(--pixel) * -1) 0 var(--pixel) var(--pixel-border-2), 
+		0 var(--pixel) 0 var(--pixel) var(--pixel-border-2),
+		0 calc(var(--pixel) * -4) 0 0 var(--pixel-border-2),
+		0 calc(var(--pixel) * 4) 0 0 var(--pixel-border-2),
+		0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -1) var(--pixel-border-2),
+		0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -1) var(--pixel-border-2),
+		0 calc(var(--pixel) * -8) 0 calc(var(--pixel) * -2) var(--pixel-border-2),
+		0 calc(var(--pixel) * 8) 0 calc(var(--pixel) * -2) var(--pixel-border-2),
+		0 calc(var(--pixel) * -11) 0 calc(var(--pixel) * -4) var(--pixel-border-2),
+		0 calc(var(--pixel) * 11) 0 calc(var(--pixel) * -4) var(--pixel-border-2),
+		0 calc(var(--pixel) * -14) 0 calc(var(--pixel) * -6) var(--pixel-border-2),
+		0 calc(var(--pixel) * 14) 0 calc(var(--pixel) * -6) var(--pixel-border-2),
+		
+	/* Border Layer 3: --pixel-border-3 */
+		calc(var(--pixel) * -3) 0 0 0 var(--pixel-border-3),
+		calc(var(--pixel) * 3) 0 0 0 var(--pixel-border-3),
+		0 0 0 calc(var(--pixel) * 2) var(--pixel-border-3),
+		0 calc(var(--pixel) * -3) 0 var(--pixel) var(--pixel-border-3),
+		0 calc(var(--pixel) * 3) 0 var(--pixel) var(--pixel-border-3),
+		0 calc(var(--pixel) * -5) 0 0 var(--pixel-border-3),
+		0 calc(var(--pixel) * 5) 0 0 var(--pixel-border-3),
+		0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -1) var(--pixel-border-3),
+		0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -1) var(--pixel-border-3),
+		0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -2) var(--pixel-border-3), 
+		0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -2) var(--pixel-border-3),
+		0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -4) var(--pixel-border-3), 
+		0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -4) var(--pixel-border-3),
+		0 calc(var(--pixel) * -15) 0 calc(var(--pixel) * -6) var(--pixel-border-3), 
+		0 calc(var(--pixel) * 15) 0 calc(var(--pixel) * -6) var(--pixel-border-3);
+}
+.history_inner {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.history_content {
+  position: absolute;
+  top: -12px;
+  left: 0;
+  width: 100%;
+  height: 104%;
+  border-radius: 16px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+	overflow: hidden;
+  
+}
+.history_content_scroll {
+	position: absolute;
+	padding: 5px 18px 20px 20px;
+	left: 0;
+	border-radius: 16px;
+	border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+	background: #ebebeb;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	.history_temporal_btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		button {
+			height: 25px;
+			width: 80px;
+			color: #fff;
+			background: #6257ff;
+			border-radius: 10px;
+			font-size: 10px;
+			transition: all .15s;
+			&:hover {
+				background: #5a51d3;
+			}
+		}
+	}
+	.history_temporal_btn-2 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		button {
+			height: 25px;
+			width: 80px;
+			color: #fff;
+			background: #6257ff;
+			border-radius: 10px;
+			font-size: 10px;
+			transition: background .15s;
+			margin: 0 15px;
+			&:last-child {
+				background: #ff5555;
+				transition: background .15s;
+				&:hover {
+					background: #e25252;
+				}
+			}
+			&:hover {
+				background: #5a51d3;
+			}
+		}
+	}
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #6eb4ff; 
+    border-radius: 5px; 
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+  }
+	scrollbar-color: #6eb4ff #ebebeb;
+	scrollbar-width: thin;
+	div {
+		font-size: 11px;
+		background: #9fffb9;
+		border-radius: 16px;
+		padding: 10px;
+		margin-bottom: 10px;
+		line-height: 130%;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&.red {
+			background: #fcc2c2;
+		}
+		&.history_clickable {
+			transition: filter .3s;
+			position: relative;
+			cursor: pointer;
+			&:hover {
+				filter: brightness(95%);
+			}
+			&::before {
+				content: "";
+				display: block;
+				background: url("../img/history_arrow.png") no-repeat;
+				background-size: cover;
+				width: 13px;
+				height: 13px;
+				bottom: 6px;
+				right: 6px;
+				opacity: .8;
+				position: absolute;
+			}
+		}
+	}
+}
+.history--hidden {
+	transform: translateY(106%);
+
+}
+#history_btn {
+	background: #ff8484;
+	border-radius: 8px;
+	border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0;
+	width: 50px;
+	height: 22px;
+	border: none;
+	transition: background .3s;
+	cursor: pointer;
+	&.history_btn--pulse {
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 25px;
+			height: 25px;
+			// border: 12px solid #fff;
+			opacity: 0.4;
+			border-radius: 50%;
+			user-select: none;
+			cursor: auto;
+			background: #fff;
+			animation: beePulse 2s infinite;
+		}
+	}
+	.history_btn-inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		&::before, &::after {
+			content: "";
+			position: absolute;
+			width: 15.1px;
+			height: 2.2px;
+			background: #000;
+			transition: all .4s;
+		}
+		&::before {
+			top: 11px;
+			left: 12.5px;
+			transform: rotate(-45deg);
+		}
+		&::after {
+			top: 11px;
+			right: 12.5px;
+			transform: rotate(45deg);
+		}
+		&.history_btn-inner--inactive {
+			&::before {
+				top: 12px;
+				left: 12.5px;
+				transform: rotate(45deg);
+			}
+			&::after {
+				top: 12px;
+				right: 12px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+@keyframes beePulse {
+	0% {
+		// width: 25px;
+		// height: 25px;
+	}
+	100% {
+		transform: translateX(-50%) scale(4);
+		// width: 100px;
+		// height: 100px;
+		opacity: .0;
+	}
+}
