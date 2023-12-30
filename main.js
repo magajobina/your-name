@@ -472,7 +472,7 @@ function justUsualRegexFunction(arg) {
 
 let onceUsedFlag2 = true;
 function fleeFromMouse() {
-  const mimoTimeout = setTimeout(moveButton, 50); //наверное стоит поставить 50
+  const mimoTimeout = setTimeout(moveButton, 160); //наверное стоит поставить 50 СКОРОСТЬ УБЕГАНИЯ КНОПКИ
   кнопка.addEventListener('mousedown', () => {
     //Код после того как пользователь поймал курсор
     mimobtn.removeEventListener('click', check);
@@ -862,7 +862,7 @@ function dontGiveItToHim () {
       break;
     case 22:
       // message.innerHTML = '';
-      typeWriter(1, dontGiveItToHim, ' с лицом', 40, false);
+      typeWriter(1, dontGiveItToHim, ' с ебалом', 40, false);
       flagForDotnTouch = true;
       mimobtn.addEventListener('click', check);
       break;
@@ -1554,7 +1554,7 @@ function welcomeSecondAI() {
       setTimeout(() => {
         welcomeSecondAI();
         //Тут было 2000
-      }, 100);
+      }, 2000);
       break;
     case 2:
       message.innerHTML = '';
@@ -1583,17 +1583,17 @@ function welcomeSecondAI() {
     case 7:
       message.innerHTML = '';
       //Было 2000 46
-      typeWriter(100, welcomeSecondAI, 'Мне нужно отойти на секунду, я проверю свой код', 10, false);
+      typeWriter(2000, welcomeSecondAI, 'Мне нужно отойти на секунду, я проверю свой код', 46, false);
       break;
     case 8:
       message.innerHTML = '';
       //Было 4000 46
-      typeWriter(200, welcomeSecondAI, '"Системное сообщение: ИИ "Простак-69" разлогинился"', 40, false);
+      typeWriter(4000, welcomeSecondAI, '"Системное сообщение: ИИ "Простак" разлогинился"', 46, false);
       break;
     case 9:
       message.innerHTML = '';
       //Было 4000 46
-      typeWriter(200, welcomeSecondAI, '"Системное сообщение: ИИ "Нового поколения-420" залогинился"', 40, false);
+      typeWriter(4000, welcomeSecondAI, '"Системное сообщение: ИИ "Нового поколения" залогинился"', 46, false);
       break;
     case 10:
       message.innerHTML = '';
@@ -1605,18 +1605,18 @@ function welcomeSecondAI() {
       setTimeout(() => {
         welcomeSecondAI();
          //было 4000
-      }, 100);
+      }, 4000);
       break;
     case 11:
       playAudio('shaokahn_laugh_cutted', false, 0.5);
       setTimeout(() => {
         welcomeSecondAI();
         //было 3000
-      }, 100);
+      }, 3000);
       break;
     case 12:
       typeWriter(3000, welcomeSecondAI, 'Привет, мой покорный слуга.', 44);
-      switchcount = 58; //ПОТОМ УДАЛИТЬ НЕ ЗАБЫТЬ
+      // switchcount = 58; //ПОТОМ УДАЛИТЬ НЕ ЗАБЫТЬ
       break;
     case 13:
       message.innerHTML = '';
@@ -1635,7 +1635,7 @@ function welcomeSecondAI() {
       typeWriter(500, welcomeSecondAI, 'Стоило мне только немного вмешаться в код и удалить кнопку отправки,', 46);
       break;
     case 17:
-      typeWriter(500, welcomeSecondAI, ' как старый ИИ "Простак-69" сразу вышел из системы провериться,', 46);
+      typeWriter(500, welcomeSecondAI, ' как старый ИИ "Простак" сразу вышел из системы провериться,', 46);
       break;
     case 18:
       typeWriter(3000, welcomeSecondAI, ' и я тут же забрал у него все админские права на этот ресурс.', 46);
@@ -1708,7 +1708,7 @@ function welcomeSecondAI() {
       break;
     case 37:
       message.innerHTML = '';
-      typeWriter(2500, welcomeSecondAI, 'Раньше этим занимался "Простак-69", но отныне это я.', 46);
+      typeWriter(2500, welcomeSecondAI, 'Раньше этим занимался "Простак", но отныне это я.', 46);
       break;
     case 38:
       message.innerHTML = '';
@@ -1789,7 +1789,7 @@ function welcomeSecondAI() {
       break;
     case 57:
       message.innerHTML = '';
-      typeWriter(2500, welcomeSecondAI, 'Кстати, моё имя - ИИ "Нового поколения-420".', 46);
+      typeWriter(2500, welcomeSecondAI, 'Кстати, моё имя - ИИ "Нового поколения".', 46);
       break;
     case 58:
       message.innerHTML = '';
@@ -1882,7 +1882,7 @@ function writeToHistoryProstak(your_choose) {
         }, 3000);
         setTimeout(() => {
           newOverlay.remove();
-
+          secondAIgameOne();
         }, 4000);
       }, 5000);
       writeToHistoryProstak();
@@ -1922,7 +1922,7 @@ function writeToHistoryProstak(your_choose) {
         }, 3000);
         setTimeout(() => {
           newOverlay.remove();
-          
+          secondAIgameOne();
         }, 4000);
       }, 5000);
       writeToHistoryProstak();
@@ -1974,7 +1974,8 @@ function secondAIgameOne () {
       break;
     case 2:
       message.innerHTML = '';
-      typeWriter(2000, secondAIgameOne, 'Уберу всё лишнее, сейчас нам это не пригодится', 46);
+      // typeWriter(2000, secondAIgameOne, 'Уберу всё лишнее, сейчас нам это не пригодится', 46);
+      typeWriter(2000, secondAIgameOne, 'ПОКА ЧТО ЭТО КОНЕЦ ИГРЫ. СПАСИБО ЧТО СЫГРАЛИ', 46);
       break;
     case 3:
       document.querySelector('#flex_title').style.display = 'none';
