@@ -239,77 +239,77 @@ function playAudio(audioName, durationInMilliseconds = false, volume = 1, button
     }
   }
 }
-// ---------------------------ЧИТ ДЛЯ СОХРАНЕНИЯ-----------------------------------------------------
-// ---------------------------ЧИТ ДЛЯ СОХРАНЕНИЯ-----------------------------------------------------
-// ---------------------------ЧИТ ДЛЯ СОХРАНЕНИЯ-----------------------------------------------------
+// ---------------------------ЧИТ ДЛЯ ЗАГРУЗКИ СОХРАНЕНИЯ-----------------------------------------------------
+// ---------------------------ЧИТ ДЛЯ ЗАГРУЗКИ СОХРАНЕНИЯ-----------------------------------------------------
+// ---------------------------ЧИТ ДЛЯ ЗАГРУЗКИ СОХРАНЕНИЯ-----------------------------------------------------
 
 let pKeyPressCount1 = 0;
 let pKeyPressCount2 = 0;
 let pKeyPressCount3 = 0;
 const threshold = 3; // Количество нажатий для обнаружения тройного нажатия
 
-document.addEventListener("keydown", function(event) {
-    if (event.key === "p" || event.key === "з") {
-        pKeyPressCount1++;
+// document.addEventListener("keydown", function(event) {
+//     if (event.key === "p" || event.key === "з") {
+//         pKeyPressCount1++;
 
-      if (pKeyPressCount1 === threshold) {
-        document.documentElement.style.setProperty('--mainbg', '#fcc2c2');
-        document.documentElement.style.setProperty('--pixel-bg', '#fcc2c2');
-        forceHistoryRed = true;
-        arrowInputBtn.style.display = 'none';
-        document.querySelector('body').style.backgroundImage = "url('img/newbg.svg')";
-        setTimeout(() => {
-          secondAIgameOne();
-        }, 2000);
-        pKeyPressCount1 = 0; // Сбросить счетчик после тройного нажатия
-      }
+//       if (pKeyPressCount1 === threshold) {
+//         document.documentElement.style.setProperty('--mainbg', '#fcc2c2');
+//         document.documentElement.style.setProperty('--pixel-bg', '#fcc2c2');
+//         forceHistoryRed = true;
+//         arrowInputBtn.style.display = 'none';
+//         document.querySelector('body').style.backgroundImage = "url('img/newbg.svg')";
+//         setTimeout(() => {
+//           secondAIgameOne();
+//         }, 2000);
+//         pKeyPressCount1 = 0; // Сбросить счетчик после тройного нажатия
+//       }
 
-    } else {
-        pKeyPressCount1 = 0; // Сбросить счетчик при нажатии на другую клавишу
-    }
+//     } else {
+//         pKeyPressCount1 = 0; // Сбросить счетчик при нажатии на другую клавишу
+//     }
 
 
     //ЭТОТ СЕЙВ КИДАЕТ НА ГАЧИ КАНВАС СЦЕНКУ. СЕЙВ НЕ ИДЕАЛЬНЫЙ, нужно будет доработать наверное чтоб юзать в финальном проекте
-    if (event.key === "o" || event.key === "щ") {
-      pKeyPressCount2++;
+  //   if (event.key === "o" || event.key === "щ") {
+  //     pKeyPressCount2++;
 
-      if (pKeyPressCount2 === threshold) {
-        checkPoint1 = true;
-        checkPoint2 = true;
-        checkPoint2_1 = true;
-        checkPoint3 = true;
-        makeGachiModalGifs();
-        document.querySelector('#omgEntireBlock1').remove();
-        //ПОТОМ УДАЛИТЬ ЧЕК
-        check();
-        theInput.value = 'DungeonMaster2000';
-        console.log("Чекпоинт номер 1, 2, 2_1, 3 == " + checkPoint1 + ', ' + checkPoint2 + ', ' + checkPoint2_1 + ', ' + checkPoint3);
-        pKeyPressCount2 = 0; // Сбросить счетчик после тройного нажатия
-      }
-  } else {
-      pKeyPressCount2 = 0; // Сбросить счетчик при нажатии на другую клавишу
-  }
+  //     if (pKeyPressCount2 === threshold) {
+  //       checkPoint1 = true;
+  //       checkPoint2 = true;
+  //       checkPoint2_1 = true;
+  //       checkPoint3 = true;
+  //       makeGachiModalGifs();
+  //       document.querySelector('#omgEntireBlock1').remove();
+  //       //ПОТОМ УДАЛИТЬ ЧЕК
+  //       check();
+  //       theInput.value = 'DungeonMaster2000';
+  //       console.log("Чекпоинт номер 1, 2, 2_1, 3 == " + checkPoint1 + ', ' + checkPoint2 + ', ' + checkPoint2_1 + ', ' + checkPoint3);
+  //       pKeyPressCount2 = 0; // Сбросить счетчик после тройного нажатия
+  //     }
+  // } else {
+  //     pKeyPressCount2 = 0; // Сбросить счетчик при нажатии на другую клавишу
+  // }
 
 
-    if (event.key === "y" || event.key === "н") {
-      pKeyPressCount3++;
+  //   if (event.key === "y" || event.key === "н") {
+  //     pKeyPressCount3++;
 
-      if (pKeyPressCount3 === threshold) {
-        checkPoint1 = true;
-        checkPoint2 = true;
-        checkPoint2_1 = true;
-        checkPoint3 = true;
-        check4 ();
-        makeGachiModalGifs();
-        document.querySelector('#omgEntireBlock1').remove();
-        theInput.value = 'DungeonMaster2000';
-          // console.log("Чекпоинт номер 1, 2, 2_1, 3 == " + checkPoint1 + ', ' + checkPoint2 + ', ' + checkPoint2_1 + ', ' + checkPoint3);
-          pKeyPressCount3 = 0; // Сбросить счетчик после тройного нажатия
-      }
-  } else {
-      pKeyPressCount3 = 0; // Сбросить счетчик при нажатии на другую клавишу
-  }
-});
+  //     if (pKeyPressCount3 === threshold) {
+  //       checkPoint1 = true;
+  //       checkPoint2 = true;
+  //       checkPoint2_1 = true;
+  //       checkPoint3 = true;
+  //       check4 ();
+  //       makeGachiModalGifs();
+  //       document.querySelector('#omgEntireBlock1').remove();
+  //       theInput.value = 'DungeonMaster2000';
+  //         // console.log("Чекпоинт номер 1, 2, 2_1, 3 == " + checkPoint1 + ', ' + checkPoint2 + ', ' + checkPoint2_1 + ', ' + checkPoint3);
+  //         pKeyPressCount3 = 0; // Сбросить счетчик после тройного нажатия
+  //     }
+  // } else {
+  //     pKeyPressCount3 = 0; // Сбросить счетчик при нажатии на другую клавишу
+  // }
+// });
 // ---------------------------ЧИТ ДЛЯ СОХРАНЕНИЯ----------------------------------------------------
 
 // typeWriter(3000, welcomeToTheClubBuddy, 'О, привет!', 50); --Курсор мигает
