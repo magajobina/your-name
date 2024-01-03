@@ -79,6 +79,10 @@ function start() {
   }, 100);
 
   const timeout = setTimeout(() => {
+    if (clickrClicks >= 10) {
+      switchcount = 49;
+      secondAIgameOne()
+    }
     clickrButton.onclick = null;
     setTimeout(() => {
       clickrButton.onclick = start;

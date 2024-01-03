@@ -1975,6 +1975,7 @@ function createButtonToHistoryOnce(functionToPlayAfter, btns = 1) {
 
 function secondAIgameOne() {
   switchcount++;
+  console.log('secondAIgameOne - START');
   switch (switchcount) {
     case 1:
       message.innerHTML = '';
@@ -1984,7 +1985,6 @@ function secondAIgameOne() {
     case 2:
       message.innerHTML = '';
       typeWriter(2000, secondAIgameOne, 'Уберу всё лишнее, сейчас нам это не пригодится', 46);
-      // typeWriter(2000, secondAIgameOne, 'ПОКА ЧТО ЭТО КОНЕЦ ИГРЫ. СПАСИБО ЧТО СЫГРАЛИ', 46);
       break;
 
     case 3:
@@ -1995,7 +1995,20 @@ function secondAIgameOne() {
       document.querySelector('.messagewrap').style.maxWidth = '90%';
       document.querySelector('.clickr').style.display = 'flex';
       break;
-      
+    case 4:
+      message.innerHTML = '';
+      typeWriter(2000, secondAIgameOne, 'Ваша задача набрать 44 клика', 46);
+      break;
+
+
+
+      //ЕСЛИ ПРОШЁЛ
+    case 50:
+      message.innerHTML = '';
+      typeWriter(2000, secondAIgameOne, 'ПОЗДРАВЛЯЮ, ПОКА ЧТО ЭТО КОНЕЦ!', 46);
+      break;
+
+
 
       default: 
       console.log('Конец свитча secondAIgameOne');
