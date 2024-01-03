@@ -1967,7 +1967,6 @@ function createButtonToHistoryOnce(functionToPlayAfter, btns = 1) {
 
 function secondAIgameOne () {
   switchcount++;
-  console.log('secondAIgameOne - START');
   switch (switchcount) {
     case 1:
       message.innerHTML = '';

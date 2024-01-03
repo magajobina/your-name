@@ -79,6 +79,8 @@ function start() {
   }, 100);
 
   const timeout = setTimeout(() => {
+    clickrClicks--; // Они на самом деле на 1 больше чем надо
+    console.log(clickrClicks);
     if (clickrClicks >= 10) {
       switchcount = 49;
       secondAIgameOne()
