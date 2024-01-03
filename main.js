@@ -2000,7 +2000,7 @@ function secondAIgameOne () {
       //ЕСЛИ ПРОШЁЛ
     case 50:
       message.innerHTML = '';
-      typeWriter(2000, secondAIgameOne, 'ПОЗДРАВЛЯЮ, ПОКА ЧТО ЭТО КОНЕЦ! Пускай словом для челленджа будет слово "Простак"', 46, false);
+      typeWriter(2000, secondAIgameOne, 'ПОЗДРАВЛЯЮ, ПОКА ЧТО ЭТО КОНЕЦ!', 46, false);
       break;
 
 
