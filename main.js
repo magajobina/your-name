@@ -248,25 +248,26 @@ let pKeyPressCount2 = 0;
 let pKeyPressCount3 = 0;
 const threshold = 3; // Количество нажатий для обнаружения тройного нажатия
 
-// document.addEventListener("keydown", function(event) {
-//     if (event.key === "p" || event.key === "з") {
-//         pKeyPressCount1++;
+document.addEventListener("keydown", function(event) {
+    if (event.key === "p" || event.key === "з") {
+        pKeyPressCount1++;
 
-//       if (pKeyPressCount1 === threshold) {
-//         document.documentElement.style.setProperty('--mainbg', '#fcc2c2');
-//         document.documentElement.style.setProperty('--pixel-bg', '#fcc2c2');
-//         forceHistoryRed = true;
-//         arrowInputBtn.style.display = 'none';
-//         document.querySelector('body').style.backgroundImage = "url('img/newbg.svg')";
-//         setTimeout(() => {
-//           secondAIgameOne();
-//         }, 2000);
-//         pKeyPressCount1 = 0; // Сбросить счетчик после тройного нажатия
-//       }
+      if (pKeyPressCount1 === threshold) {
+        turnOffIntroModal();
+        document.documentElement.style.setProperty('--mainbg', '#fcc2c2');
+        document.documentElement.style.setProperty('--pixel-bg', '#fcc2c2');
+        forceHistoryRed = true;
+        arrowInputBtn.style.display = 'none';
+        document.querySelector('body').style.backgroundImage = "url('img/newbg.svg')";
+        setTimeout(() => {
+          secondAIgameOne();
+        }, 2000);
+        pKeyPressCount1 = 0; // Сбросить счетчик после тройного нажатия
+      }
 
-//     } else {
-//         pKeyPressCount1 = 0; // Сбросить счетчик при нажатии на другую клавишу
-//     }
+    } else {
+        pKeyPressCount1 = 0; // Сбросить счетчик при нажатии на другую клавишу
+    }
 
 
     //ЭТОТ СЕЙВ КИДАЕТ НА ГАЧИ КАНВАС СЦЕНКУ. СЕЙВ НЕ ИДЕАЛЬНЫЙ, нужно будет доработать наверное чтоб юзать в финальном проекте
@@ -309,7 +310,7 @@ const threshold = 3; // Количество нажатий для обнару�
   // } else {
   //     pKeyPressCount3 = 0; // Сбросить счетчик при нажатии на другую клавишу
   // }
-// });
+});
 // ---------------------------ЧИТ ДЛЯ СОХРАНЕНИЯ----------------------------------------------------
 
 // typeWriter(3000, welcomeToTheClubBuddy, 'О, привет!', 50); --Курсор мигает
@@ -1966,6 +1967,7 @@ function createButtonToHistoryOnce(functionToPlayAfter, btns = 1) {
 
 function secondAIgameOne () {
   switchcount++;
+  console.log('secondAIgameOne - START');
   switch (switchcount) {
     case 1:
       message.innerHTML = '';
@@ -1974,8 +1976,7 @@ function secondAIgameOne () {
       break;
     case 2:
       message.innerHTML = '';
-      // typeWriter(2000, secondAIgameOne, 'Уберу всё лишнее, сейчас нам это не пригодится', 46);
-      typeWriter(2000, secondAIgameOne, 'ПОКА ЧТО ЭТО КОНЕЦ ИГРЫ. СПАСИБО ЧТО СЫГРАЛИ', 46);
+      typeWriter(2000, secondAIgameOne, 'Уберу всё лишнее, сейчас нам это не пригодится', 46);
       break;
     case 3:
       document.querySelector('#flex_title').style.display = 'none';
@@ -1984,6 +1985,18 @@ function secondAIgameOne () {
       document.querySelector('.message').style.fontSize = 'min(3vw, 22px)';
       document.querySelector('.messagewrap').style.maxWidth = '90%';
       document.querySelector('.clickr').style.display = 'flex';
+      break;
+    case 4:
+      message.innerHTML = '';
+      typeWriter(2000, secondAIgameOne, 'Ваша задача набрать 44 клика', 46);
+      break;
+
+
+
+      //ЕСЛИ ПРОШЁЛ
+    case 50:
+      message.innerHTML = '';
+      typeWriter(2000, secondAIgameOne, 'ПОЗДРАВЛЯЮ, ПОКА ЧТО ЭТО КОНЕЦ!', 46);
       break;
 
 
