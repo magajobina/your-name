@@ -473,7 +473,7 @@ function justUsualRegexFunction(arg) {
 
 let onceUsedFlag2 = true;
 function fleeFromMouse() {
-  const mimoTimeout = setTimeout(moveButton, 160); //наверное стоит поставить 50 СКОРОСТЬ УБЕГАНИЯ КНОПКИ
+  const mimoTimeout = setTimeout(moveButton, 140); //наверное стоит поставить 50 СКОРОСТЬ УБЕГАНИЯ КНОПКИ
   кнопка.addEventListener('mousedown', () => {
     //Код после того как пользователь поймал курсор
     mimobtn.removeEventListener('click', check);
@@ -1982,12 +1982,17 @@ function secondAIgameOne () {
       theInput.style.display = 'none';
       document.querySelector('.input_wrap').style.marginTop = 0;
       document.querySelector('.message').style.fontSize = 'min(3vw, 22px)';
+      document.querySelector('.message').style.lineHeight = '29px';
       document.querySelector('.messagewrap').style.maxWidth = '90%';
       document.querySelector('.clickr').style.display = 'flex';
+
+      setTimeout(() => {  
+        secondAIgameOne();
+      }, 1000);
       break;
     case 4:
       message.innerHTML = '';
-      typeWriter(2000, secondAIgameOne, 'Ваша задача набрать 44 клика', 46);
+      typeWriter(2000, secondAIgameOne, 'Ваша задача набрать 40 кликов', 46, false);
       break;
 
 
@@ -1995,7 +2000,7 @@ function secondAIgameOne () {
       //ЕСЛИ ПРОШЁЛ
     case 50:
       message.innerHTML = '';
-      typeWriter(2000, secondAIgameOne, 'ПОЗДРАВЛЯЮ, ПОКА ЧТО ЭТО КОНЕЦ!', 46);
+      typeWriter(2000, secondAIgameOne, 'ПОЗДРАВЛЯЮ, ПОКА ЧТО ЭТО КОНЕЦ! Пускай словом для челленджа будет слово "Простак"', 46, false);
       break;
 
 
